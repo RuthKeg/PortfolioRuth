@@ -6,7 +6,7 @@ export default function About() {
       <h2 className="section-title about-title">À propos de moi</h2>
 
       <p className="about-text styled">
-        Je suis <span className="highlight">Ruth Kegmo</span>, Étudiante en Technologie de l'informatique. J'ai acquis des bases solides en développement logiciel, gestion de données et de réseaux, ainsi qu'en support technique.
+        Étudiante en Technologie de l'informatique, competences en développement logiciel, gestion de données et de réseaux, et en support technique.
       </p>
       <p className="about-text styled">
         Mon objectif est de mettre ces acquis en pratique pour développer mon expertise terrain et contribuer efficacement en milieu professionnel.

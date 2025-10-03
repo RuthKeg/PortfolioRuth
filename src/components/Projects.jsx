@@ -4,6 +4,9 @@ export default function Projects() {
   return (
     <section id="projects" className="section scroll-reveal">
       <h2 className="section-title">Projets</h2>
+      <p className="about-text styled">
+        Mettre le curseur sur le projet pour voir l'info🌸.
+      </p>
       <div className="projects-grid">
         {portfolio.projects.map((p, i) => (
           <div className="project-card" key={i}>
