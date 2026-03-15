@@ -1,3 +1,4 @@
+// src/components/Navbar.jsx
 import React, { useEffect, useRef, useState } from "react";
 
 /**

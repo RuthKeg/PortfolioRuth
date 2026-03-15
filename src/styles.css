@@ -386,35 +386,88 @@ body.dark .skill-category {
 }
 
 
-/* Skill tags */
-.skill-tags {
+/* === Mes compétences (clair & sombre) === */
+.skills-grid {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-}
-.tag {
-  background: linear-gradient(135deg, #f9a8d4, #8b5cf6);
-  padding: 0.4rem 0.75rem;
-  border-radius: var(--radius-full);
-  font-size: 0.9rem;
-  color: #fff;
-  font-weight: 500;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.tag:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 15px rgba(139, 92, 246, 0.3);
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Inter", "Segoe UI", sans-serif;
 }
 
-/* Dark mode */
-body.dark .skill-card {
-  background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
-  border-color: var(--violet-dark);
+.skill-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: start;
+  gap: 2rem;
+  padding: 1.5rem 1.8rem;
+  border-radius: 10px;
+  background: #f9fafb; /* mode clair */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease, color 0.3s ease;
 }
-body.dark .tag {
-  background: linear-gradient(135deg, #8b5cf6, #d946ef);
+
+.skill-row:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+.skill-category {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111827; /* clair : noir */
+  text-transform: capitalize;
+  border-left: 4px solid #ec4899; /* accent rose */
+  padding-left: 0.6rem;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+}
+
+.skill-list span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1f2937; /* clair : gris foncé */
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.skill-list span::before {
+  content: "▸"; /* chevron élégant */
+  color: #ec4899; /* accent rose */
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* === Mode sombre === */
+@media (prefers-color-scheme: dark) {
+  .skill-row {
+    background: #1f2937; /* foncé élégant */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .skill-category {
+    color: #f9fafb; /* clair */
+    border-left-color: #ec4899;
+  }
+
+  .skill-list span {
+    color: #e5e7eb; /* gris clair */
+  }
+
+  .skill-list span::before {
+    color: #ec4899;
+  }
+}
+
+
 
 .projects-grid {
   display: grid;

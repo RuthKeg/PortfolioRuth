@@ -10,7 +10,20 @@ export default function Projects() {
       <div className="projects-grid">
         {portfolio.projects.map((p, i) => (
           <div className="project-card" key={i}>
+            {/* Image par défaut */}
             <img src={p.img} alt={p.title} />
+
+            {/* Vidéo (mini-démo au hover) */}
+            {p.video && (
+              <video
+                src={p.video}
+                muted
+                loop
+                preload="none"
+              />
+            )}
+
+            {/* Overlay d'infos */}
             <div className="project-overlay">
               <h3>{p.title}</h3>
               <p>{p.description}</p>
