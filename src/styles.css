@@ -60,8 +60,11 @@ a:hover { color: var(--violet-dark); }
   min-height: 100vh;
   padding: 2rem 8%;
   gap: 2rem;
-  background: var(--bg);
+  background-color: var(--bg-light);
   overflow: hidden;
+}
+body.dark .hero {
+  background-color: var(--bg-dark);
 }
 
 /* --- Texte --- */
@@ -95,7 +98,7 @@ a:hover { color: var(--violet-dark); }
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--accent2);
+  color: var(--rose-light);
 }
 
 /* Effet typing */
